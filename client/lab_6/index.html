@@ -1,9 +1,51 @@
-<!--
-    This is how to build the CSS-only load animation from loading.io    
-    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-
-    This is helpful for showing your client-side users when data is loading,
-    since there's otherwise no sign your app is thinking about something!
-
-    Try placing it at the same level in your element tree as your Submit button
--->
+<<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Ethan Meyer INST377 Labs</title>
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+      <div class="wrapper">
+        <header class="header"><h1>Ethan Meyer's Labs For INST377</h1></header>
+        <!-- wrapper -->
+        <div class="container">
+          <!-- container -->
+          <div class="left_section box">
+            <!-- left inputs -->
+            <h2>Form Inputs</h2>
+            
+            <form action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json" class="main_form box">
+                <button type="button" id="loadButton">Load County Data</button>
+              <div>
+                <label for="resto">Restaurant Name</label>
+                <input type="text" name="resto" id="resto">
+              </div>
+              <div class="buttons">
+                  <button type="button" class="filterButton">Filter Data</button>
+                  <button type="submit">Load Data</button>
+              </div>
+            </form>
+          </div>
+          <div class="right_section box">
+            <!-- right side -->
+            <!-- images box -->
+            <h2>Local Restaurant List</h2>
+  
+            <div class="box" >
+                <ol id="restaurant_list">
+                  A list of restaurants
+                </ol>
+                <div class="lds-ellipsis" id="data_load_animation"><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          My GITHUB ACCOUNT
+          <a href="https://github.com/ethanmeyer41">My Github Account</a>
+        </footer>
+      </div>
+      <script src="./script.js"></script>
+    </body>
+  </html>
