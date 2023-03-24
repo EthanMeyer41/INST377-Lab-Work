@@ -1,9 +1,48 @@
-<!-- Bring in your successful HTML/CSS from the Flexbox lab -->
-<!-- Your page will need a form in it, but that form will not need an action
-    You will need to add the attribute "name" to your input
-    with a value of 'resto'
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan Meyer INST377 Labs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"><h1>Ethan Meyer's Labs For INST377</h1></header>
+      <!-- wrapper -->
+      <div class="container">
+        <!-- container -->
+        <div class="left_section box">
+          <!-- left inputs -->
+          <h2>Form Inputs</h2>
+          <!-- THIS IS FOR LAB 5 -->
+          <form action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json" class="main_form box">
+            <div>
+              <label for="resto">Restaurant Name</label>
+              <input type="text" name="resto" id="resto">
+            </div>
+            <div class="buttons">
+                <button type="button" class="filterButton">Filter Data</button>
+                <button type="submit">Load Data</button>
+            </div>
+          </form>
+        </div>
+        <div class="right_section box">
+          <!-- right side -->
+          <!-- images box -->
+          <h2>Local Restaurant List</h2>
 
-    You will need to hook your script.js to this file for the midterm to work
-    you will need a "filter" button with a type of "button" and a
-    "load data" button with a type of "submit" on it
--->
+          <div class="box" class="restaurant_list">
+            <!-- description box -->
+            A list of restaurants from an API
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        My GITHUB ACCOUNT
+        <a href="https://github.com/ethanmeyer41">My Github Account</a>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
