@@ -83,11 +83,11 @@ function cutRestaurantList(list){
 
 async function mainEvent() { // the async keyword means we can make API requests
   const mainForm = document.querySelector('.main_form'); 
-  const filterButton = document.querySelector('#filterButton');
-  const loadDataButton = document.querySelector('#loadButton');
-  const generateButton = document.querySelector('#generateButton');
+  const filterButton = document.querySelector('#filter_button');
+  const loadDataButton = document.querySelector('#data_load');
+  const generateButton = document.querySelector('#generate');
 
-  const loadAnimation = document.querySelector('#data_load_animation');
+  const loadAnimation = document.querySelector('data_load_animation');
   loadAnimation.style.display = 'none';
   
   let currentList = []; 
@@ -130,7 +130,8 @@ async function mainEvent() { // the async keyword means we can make API requests
   });
 
   filterButton.addEventListener('click', (event) => {
-    console.log("Clicked Filter Button");
+    console.log("Clicked FilterButton")
+
 
     const formData = new FormData(mainForm);
     const formProps = Object.fromEntries(formData);
@@ -144,10 +145,20 @@ async function mainEvent() { // the async keyword means we can make API requests
 
   generateButton.addEventListener('click', (event) => {
     console.log('Generate New List');
-    const restaurantList = cutRestaurantList(currentList);
+    const restaurantList = cutRestaurantList(currentList)
+    console.log(restaurantList)
     injectHTML(restaurantList);
   })
 
+const formData = new FormData(mainForm)
+const formProps = Object.fromEntries(formData)
+
+console.log(formProps)
+const newList = filterList(currentList, formProps.resto)
+injectHTML(currentList)
+
+console.log(newList)
+injectHTML(newList)
   /*
     Now that you HAVE a list loaded, write an event listener set to your filter button
     it should use the 'new FormData(target-form)' method to read the contents of your main form

@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Meyer INST377 Labs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    
+     <div= class="wrapper">
+        <header class="header">
+            <h1>Ethan Meyer's Labs For INST377</h1>
+        </header>
+        <ol class="container">
+            <div class="left_section">
+                <h3>Form inputs</h3>
+                <form 
+                action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json" class="box main_form"
+                >
+
+                    <div>
+                        <label for="resto">Restaurant Name</label>
+                        <input type="text" id="resto" name="resto">
+                    </div>
+                    <button type="button" id="data_load">Load county data</button>
+                    <button type="button" class="gilter_button" >Filter data</button>
+                    <button type="button" class ="generate">Generate List</button>
+                </form>
+            </div>
+            <div class="right_section">
+            <h3>Local Restaurants</h3>
+            A list of local Restaurants
+            <div class="lds-ellipsis" id="data_load_animation"></div><div></div><div></div><div></div><div></div>
+
+        </div>
+    </ol>
+</div>
+<footer class="footer">
+    <a href="https://github.com/ethanmeyer41">My github account</a>
+             </footer>
+         </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
